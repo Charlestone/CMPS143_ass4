@@ -27,6 +27,7 @@ FEATURES_DIR = "features/"
 
 
 def write_features_category(features_category_tuples, output_file_name, test):
+    s
     output_file = open("{}-features.txt".format(output_file_name), "w", encoding="utf-8")
     if test:
         for (features, category) in features_category_tuples:
@@ -38,6 +39,7 @@ def write_features_category(features_category_tuples, output_file_name, test):
 
 
 def get_classifier(classifier_fname):
+
     classifier_file = open(classifier_fname, 'rb')
     classifier = pickle.load(classifier_file)
     classifier_file.close()
@@ -45,6 +47,7 @@ def get_classifier(classifier_fname):
 
 
 def save_classifier(classifier, classifier_fname):
+
     classifier_file = open(classifier_fname, 'wb')
     pickle.dump(classifier, classifier_file)
     classifier_file.close()
@@ -56,8 +59,6 @@ def save_classifier(classifier, classifier_fname):
 
 def evaluate(classifier, features_category_tuples, reference_text, data_set_name=None):
 
-    ###     YOUR CODE GOES HERE
-    # TODO: evaluate your model
     features = [feat[0] for feat in features_category_tuples]
     real_labels = [feat[1] for feat in features_category_tuples]
     accuracy = nltk.classify.accuracy(classifier, [(features[i], real_labels[i]) for i in range(len(features))])
@@ -91,8 +92,6 @@ def train_model(datafile, feature_set, binning, save_model=None):
     features_data, texts = build_features(datafile, feature_set, binning,
                                               feature_set+'-'+'training')
 
-    ###     YOUR CODE GOES HERE
-    # TODO: train your model here
     classifier = nltk.NaiveBayesClassifier.train(features_data)
 
 
@@ -166,6 +165,19 @@ def build_classifier(classifier_name):
 
 
 def main():
+
+    parser = argparse.ArgumentParser(description='Assignment 4')
+    parser.add_argument('-d', dest="data_fname", default="train_examples.tsv",
+                        help='File name of the training data.')
+    parser.add_argument('-t', dest="test_data", default=None,
+                        help='File name of the test data')
+    parser.add_argument('-w', dest="write_fname", default=None,
+                        help='File name of the output.')
+    parser.add_argument('-b', dest="binning", default=True,
+                        help='Whether you want to bin the features or not')
+    parser.add_argument('-c', dest="classifier", default=None,
+                        help='Classifier already trained')
+    args = parser.parse_args()
 
     all_feature_sets = [
         "word_pos_features", "word_features", "word_pos_liwc_features",
