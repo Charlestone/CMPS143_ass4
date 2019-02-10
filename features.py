@@ -164,7 +164,7 @@ FEATURE_SETS = {"word_pos_features", "word_features", "word_pos_liwc_features", 
                 "word_embedding"}
 
 
-def get_features_category_tuples(category_text_dict, feature_set, binning=False):
+def get_features_category_tuples(category_text_dict, feature_set, binning):
     """
 
     You will might want to update the code here for the competition part.
