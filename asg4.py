@@ -27,7 +27,6 @@ FEATURES_DIR = "features/"
 
 
 def write_features_category(features_category_tuples, output_file_name, test):
-    s
     output_file = open("{}-features.txt".format(output_file_name), "w", encoding="utf-8")
     if test:
         for (features, category) in features_category_tuples:
@@ -186,9 +185,6 @@ def main():
         #"binning_word_pos_features",
         #"binning_word_features", "binning_word_pos_liwc_features"
     ]
-
-    #get model with raw count of the unigrams and bigrams
-
 
 
 if __name__ == "__main__":
