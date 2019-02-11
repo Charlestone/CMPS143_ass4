@@ -52,10 +52,7 @@ def build_features(data_file, feat_name, binning, save_feats=None, test=False):
 
     # read text data
     positive_texts, negative_texts = data_helper.get_reviews(os.path.join(DATA_DIR, data_file))
-    if test:
-        category_texts = {"unknown": positive_texts, "unknown2": negative_texts}
-    else:
-        category_texts = {"positive": positive_texts, "negative": negative_texts}
+    category_texts = {"positive": positive_texts, "negative": negative_texts}
 
     # build features
     features_category_tuples, texts = get_features_category_tuples(category_texts, feat_name, binning)
