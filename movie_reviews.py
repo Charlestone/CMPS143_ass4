@@ -13,7 +13,10 @@ from nltk.corpus import movie_reviews
 # This will be used for feature selection later on
 # Initialize it to None so that we use all the features the first time around
 selected_features = None
+DATA_DIR = "data"
+LIWC_DIR = "liwc"
 
+word_category_counter.load_dictionary(LIWC_DIR)
 def bin(count):
     # Just a wild guess on the cutoff
     return count if count < 4 else 5
@@ -36,7 +39,7 @@ def add_liwc_features(text, feature_vector):
     #feature_vector["liwc:sad"] = liwc_scores["Sadness"]
     #feature_vector["liwc:cogmech"] = liwc_scores["Cognitive Processes"]
     #feature_vector["liwc_motion"] = liwc_scores["Motion"]
-    
+
     negative_score = liwc_scores["Negative Emotion"]
     positive_score = liwc_scores["Positive Emotion"]
 
@@ -59,15 +62,15 @@ def add_lexical_features(fdist, feature_vector):
 
         # Binning
         # Binning really helps for this data
-        # fname = "unigram:{0}_{1}".format(word, bin(freq))
-        # if selected_features == None or fname in selected_features:
-        #    feature_vector["unigram:{0}_{1}".format(word, bin(freq))] = 1
+        fname = "unigram:{0}_{1}".format(word, bin(freq))
+        if selected_features == None or fname in selected_features:
+           feature_vector["unigram:{0}_{1}".format(word, bin(freq))] = 1
             
         # Using the relative frequency doesn't!
         # This is part 3 of the assignment, you might want to try something
         # else for part 4
-        # if selected_features == None or fname in selected_features:
-        #     feature_vector[fname] = float(freq) / fdist.N()
+        if selected_features == None or fname in selected_features:
+            feature_vector[fname] = float(freq) / fdist.N()
         
 # Adds all our features and returns the vector
 def features(review_text, review_words):
@@ -109,7 +112,7 @@ def evaluate(classifier, data, reviews, output_file):
     
 if __name__ == '__main__':
     # You have to download the movie reviews first
-    #nltk.download("movie_reviews")
+    nltk.download("movie_reviews")
     reviews = [
          (movie_reviews.raw(fid), list(movie_reviews.words(fid)), category) 
          for category in movie_reviews.categories() 
@@ -146,40 +149,40 @@ if __name__ == '__main__':
     print("{0:6s} {1:8.5f}".format("Test", test_accuracy))
     
     # # Feature selection
-    # best = (0.0, 0)
-    # best_features = classifier.most_informative_features(10000)
-    # for i in [2**i for i in range(5, 15)]:
-    #     selected_features = set([fname for fname, value in best_features[:i]])
-    #
-    #     featuresets = [
-    #         (features(review_text, review_words), label)
-    #         for (review_text, review_words, label) in reviews
-    #     ]
-    #
-    #     train_data      = featuresets[:1700]
-    #     develop_data    = featuresets[1700:1800]
-    #     test_data       = featuresets[1800:]
-    #
-    #     classifier = nltk.NaiveBayesClassifier.train(train_data)
-    #     accuracy = nltk.classify.accuracy(classifier, develop_data)
-    #     print("{0:6d} {1:8.5f}".format(i, accuracy))
-    #
-    #     if accuracy > best[0]:
-    #         best = (accuracy, i)
-    #
-    # # Now train on the best features
-    # selected_features = set([fname for fname, value in best_features[:best[1]]])
-    # featuresets = [
-    #     (features(review_text, review_words), label)
-    #     for (review_text, review_words, label) in reviews
-    # ]
-    #
-    # train_data      = featuresets[:1700]
-    # develop_data    = featuresets[1700:1800]
-    # test_data       = featuresets[1800:]
-    #
-    # classifier = nltk.NaiveBayesClassifier.train(train_data)
-    # accuracy = nltk.classify.accuracy(classifier, test_data)
-    # print("{0:6s} {1:8.5f}".format("Test", accuracy))
-    # evaluate(classifier, test_data, reviews, "output.txt")
+    best = (0.0, 0)
+    best_features = classifier.most_informative_features(10000)
+    for i in [2**i for i in range(5, 15)]:
+        selected_features = set([fname for fname, value in best_features[:i]])
+
+        featuresets = [
+            (features(review_text, review_words), label)
+            for (review_text, review_words, label) in reviews
+        ]
+
+        train_data      = featuresets[:1700]
+        develop_data    = featuresets[1700:1800]
+        test_data       = featuresets[1800:]
+
+        classifier = nltk.NaiveBayesClassifier.train(train_data)
+        accuracy = nltk.classify.accuracy(classifier, develop_data)
+        print("{0:6d} {1:8.5f}".format(i, accuracy))
+
+        if accuracy > best[0]:
+            best = (accuracy, i)
+
+    # Now train on the best features
+    selected_features = set([fname for fname, value in best_features[:best[1]]])
+    featuresets = [
+        (features(review_text, review_words), label)
+        for (review_text, review_words, label) in reviews
+    ]
+
+    train_data      = featuresets[:1700]
+    develop_data    = featuresets[1700:1800]
+    test_data       = featuresets[1800:]
+
+    classifier = nltk.NaiveBayesClassifier.train(train_data)
+    accuracy = nltk.classify.accuracy(classifier, test_data)
+    print("{0:6s} {1:8.5f}".format("Test", accuracy))
+    evaluate(classifier, test_data, reviews, "output.txt")
     
