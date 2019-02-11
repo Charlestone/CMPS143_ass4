@@ -1,0 +1,31 @@
+Regular Naive Bayes with all the features
+DEV SET
+ 0.8642857142857143
+          |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+TEST SET
+ 0.8308457711442786
+          |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
