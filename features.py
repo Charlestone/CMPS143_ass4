@@ -10,7 +10,7 @@ LIWC_DIR = "liwc"
 
 word_category_counter.load_dictionary(LIWC_DIR)
 
-w2vecmodel = "data/glove-w2v.txt"
+w2vecmodel = "./glove-w2v.txt"
 w2v = None
 
 def normalize(token, should_normalize=True):
