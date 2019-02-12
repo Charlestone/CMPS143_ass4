@@ -1,7 +1,7 @@
-Regular Naive Bayes with all the features
-DEV SET
- 0.8642857142857143
-          |   n   p |
+---------Training different Naïve Bayes classifiers:--------- 
+development All features info: 
+Accuracy: 0.8642857142857143 
+         |   n   p |
          |   e   o |
          |   g   s |
          |   a   i |
@@ -14,9 +14,10 @@ negative |<132>  8 |
 positive |  30<110>|
 ---------+---------+
 (row = reference; col = test)
-TEST SET
- 0.8308457711442786
-          |   n   p |
+
+test All features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
          |   e   o |
          |   g   s |
          |   a   i |
@@ -29,3 +30,675 @@ negative |<191> 10 |
 positive |  58<143>|
 ---------+---------+
 (row = reference; col = test)
+
+development 32 features info: 
+Accuracy: 0.6785714285714286 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative | <77> 63 |
+positive |  27<113>|
+---------+---------+
+(row = reference; col = test)
+
+test 32 features info: 
+Accuracy: 0.6791044776119403 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<113> 88 |
+positive |  41<160>|
+---------+---------+
+(row = reference; col = test)
+
+development 64 features info: 
+Accuracy: 0.7285714285714285 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative | <94> 46 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+
+test 64 features info: 
+Accuracy: 0.7089552238805971 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<131> 70 |
+positive |  47<154>|
+---------+---------+
+(row = reference; col = test)
+
+development 128 features info: 
+Accuracy: 0.8035714285714286 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<108> 32 |
+positive |  23<117>|
+---------+---------+
+(row = reference; col = test)
+
+test 128 features info: 
+Accuracy: 0.7686567164179104 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<148> 53 |
+positive |  40<161>|
+---------+---------+
+(row = reference; col = test)
+
+development 256 features info: 
+Accuracy: 0.8178571428571428 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<115> 25 |
+positive |  26<114>|
+---------+---------+
+(row = reference; col = test)
+
+test 256 features info: 
+Accuracy: 0.8059701492537313 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<164> 37 |
+positive |  41<160>|
+---------+---------+
+(row = reference; col = test)
+
+development 512 features info: 
+Accuracy: 0.7892857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<118> 22 |
+positive |  37<103>|
+---------+---------+
+(row = reference; col = test)
+
+test 512 features info: 
+Accuracy: 0.8084577114427861 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<176> 25 |
+positive |  52<149>|
+---------+---------+
+(row = reference; col = test)
+
+development 1024 features info: 
+Accuracy: 0.7714285714285715 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<123> 17 |
+positive |  47 <93>|
+---------+---------+
+(row = reference; col = test)
+
+test 1024 features info: 
+Accuracy: 0.7985074626865671 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<180> 21 |
+positive |  60<141>|
+---------+---------+
+(row = reference; col = test)
+
+development 2048 features info: 
+Accuracy: 0.7714285714285715 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<129> 11 |
+positive |  53 <87>|
+---------+---------+
+(row = reference; col = test)
+
+test 2048 features info: 
+Accuracy: 0.7611940298507462 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<184> 17 |
+positive |  79<122>|
+---------+---------+
+(row = reference; col = test)
+
+development 4096 features info: 
+Accuracy: 0.7892857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  51 <89>|
+---------+---------+
+(row = reference; col = test)
+
+test 4096 features info: 
+Accuracy: 0.7761194029850746 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<184> 17 |
+positive |  73<128>|
+---------+---------+
+(row = reference; col = test)
+
+development 8192 features info: 
+Accuracy: 0.8178571428571428 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<131>  9 |
+positive |  42 <98>|
+---------+---------+
+(row = reference; col = test)
+
+test 8192 features info: 
+Accuracy: 0.818407960199005 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<188> 13 |
+positive |  60<141>|
+---------+---------+
+(row = reference; col = test)
+
+development 16384 features info: 
+Accuracy: 0.8535714285714285 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<131>  9 |
+positive |  32<108>|
+---------+---------+
+(row = reference; col = test)
+
+test 16384 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+development 32768 features info: 
+Accuracy: 0.8571428571428571 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<131>  9 |
+positive |  31<109>|
+---------+---------+
+(row = reference; col = test)
+
+test 32768 features info: 
+Accuracy: 0.8258706467661692 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<192>  9 |
+positive |  61<140>|
+---------+---------+
+(row = reference; col = test)
+
+development 65536 features info: 
+Accuracy: 0.8642857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+
+test 65536 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+development 131072 features info: 
+Accuracy: 0.8642857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+
+test 131072 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+development 262144 features info: 
+Accuracy: 0.8642857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+
+test 262144 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+development 524288 features info: 
+Accuracy: 0.8642857142857143 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<132>  8 |
+positive |  30<110>|
+---------+---------+
+(row = reference; col = test)
+
+test 524288 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+---------Best set of features: 16384---------
+test 16384 features info: 
+Accuracy: 0.8308457711442786 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<191> 10 |
+positive |  58<143>|
+---------+---------+
+(row = reference; col = test)
+
+---------Training BernoulliNB classifier:--------- 
+dev 16384 features info: 
+Accuracy: 0.7321428571428571 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative | <73> 67 |
+positive |   8<132>|
+---------+---------+
+(row = reference; col = test)
+
+test 16384 features info: 
+Accuracy: 0.7412935323383084 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<109> 92 |
+positive |  12<189>|
+---------+---------+
+(row = reference; col = test)
+
+---------Training Decision Tree classifier:---------
+dev 16384 features info: 
+Accuracy: 0.75 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<112> 28 |
+positive |  42 <98>|
+---------+---------+
+(row = reference; col = test)
+
+test 16384 features info: 
+Accuracy: 0.6940298507462687 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<137> 64 |
+positive |  59<142>|
+---------+---------+
+(row = reference; col = test)
+---------Training SVM classifier with word features:---------
+dev 32768 features info: 
+Accuracy: 0.5285714285714286 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative | <18>122 |
+positive |  10<130>|
+---------+---------+
+(row = reference; col = test)
+
+test 32768 features info: 
+Accuracy: 0.5497512437810945 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative | <29>172 |
+positive |   9<192>|
+---------+---------+
+(row = reference; col = test)
+
+---------Training SVM classifier with w2vec features:---------
+dev All features info: 
+Accuracy: 0.7285714285714285 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<118> 22 |
+positive |  54 <86>|
+---------+---------+
+(row = reference; col = test)
+
+test All features info: 
+Accuracy: 0.7189054726368159 
+         |   n   p |
+         |   e   o |
+         |   g   s |
+         |   a   i |
+         |   t   t |
+         |   i   i |
+         |   v   v |
+         |   e   e |
+---------+---------+
+negative |<166> 35 |
+positive |  78<123>|
+---------+---------+
+(row = reference; col = test)
+
+
+---------Predictions of the best NB classifier (32768 features):---------
+['negative', 'positive', 'negative', 'positive', 'positive', 'positive', 'negative', 'positive', 'negative', 'positive',
+'positive', 'negative', 'positive', 'positive', 'negative', 'positive', 'positive', 'negative', 'positive', 'positive',
+'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'negative', 'negative',
+'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'negative', 'positive', 'negative',
+'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive',
+'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'negative',
+'negative', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative',
+'negative', 'positive', 'negative', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'negative',
+'negative', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive',
+'negative', 'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative',
+'negative', 'positive', 'positive', 'positive', 'negative', 'negative', 'positive', 'negative', 'positive', 'positive',
+'negative', 'positive', 'negative', 'positive', 'negative', 'negative', 'positive', 'positive', 'positive', 'positive',
+'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive',
+'negative', 'positive', 'negative', 'positive', 'positive', 'negative', 'negative', 'positive', 'negative', 'positive',
+'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'negative', 'positive', 'positive',
+'negative', 'positive', 'positive', 'negative', 'negative', 'negative', 'negative', 'positive', 'positive', 'positive',
+'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive',
+'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive',
+'negative', 'positive', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative', 'positive', 'positive',
+'negative', 'positive', 'positive', 'negative', 'positive', 'positive', 'positive', 'positive', 'positive', 'negative',
+'positive', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'positive', 'negative', 'positive', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'positive', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'positive', 'negative',
+'negative', 'negative', 'negative', 'positive', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'positive', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'positive', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'positive', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative', 'negative',
+'negative', 'negative']
