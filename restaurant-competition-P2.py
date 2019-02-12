@@ -138,9 +138,11 @@ def main():
     fct_test, texts_test = build_features(args.test_data, "word_features", args.binning)
     for feat_dict, label in fct_test:
         feat_dict = select_features(feat_dict, selected_features)
+    dev_acc, dev_cm = evaluate(nb, args.dev_data, args.binning)
+    print_results(write_fname, 'development', '32768', dev_acc, dev_cm)
     accuracy, cm = select_evaluate(best_nb, fct_test)
     print_results(write_fname, 'test', '32768', accuracy, cm)
-    sys.stdout = open("nb-word_features-{}_features.txt".format(best[1]), 'a+')
+    sys.stdout = open(write_fname, 'a+')
     print('Predictions of the best NB classifier.:')
     print(best_nb.classify_many([feat[0] for feat in fct_test]))
     sys.stdout = sys.__stdout__
