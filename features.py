@@ -158,7 +158,12 @@ def get_word_embedding_features(text):
     feature_dict = w2v.get_doc2vec_feature_dict(text)
     return feature_dict
 
-
+def get_w2v(category_text_dict):
+    feat_w2vec = []
+    for category in category_text_dict:
+        for text in category_text_dict[category]:
+            feat_w2vec.append((get_word_embedding_features(text), category))
+    return feat_w2vec
 
 FEATURE_SETS = {"word_pos_features", "word_features", "word_pos_liwc_features", "only_liwc",
                 "word_embedding"}
